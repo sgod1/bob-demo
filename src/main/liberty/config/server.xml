@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="Economic Forecast SOAP Service">
+
+    <featureManager>
+        <feature>servlet-6.1</feature>
+        <feature>xmlWS-4.0</feature>
+    </featureManager>
+
+    <!-- Bound to loopback only; plain HTTP is for local development. Use TLS 1.2+ when exposing. -->
+    <httpEndpoint id="defaultHttpEndpoint" host="127.0.0.1" httpPort="9080" httpsPort="9443"/>
+
+    <webApplication contextRoot="/forecast" location="economic-forecast-service.war"/>
+</server>
